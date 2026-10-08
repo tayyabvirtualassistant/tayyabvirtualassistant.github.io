@@ -74,15 +74,20 @@
 .hamburger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
-  width: 28px;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
   z-index: 1100;
   position: relative;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
   height: 2px;
-  width: 100%;
+  width: 24px;
   background: var(--text-primary);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -90,6 +95,7 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Mobile menu: fades in place (no off-screen transform, so it can never widen the page) */
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -101,18 +107,31 @@
   justify-content: center;
   gap: 28px;
   padding: 0 10%;
-  transform: translateX(100%);
+  opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.mobile-overlay.open { visibility: visible; }
+.mobile-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
 .mobile-overlay a {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--text-primary);
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
+.mobile-overlay.open a { opacity: 1; transform: none; }
+.mobile-overlay.open a:nth-child(1) { transition-delay: 0.05s; }
+.mobile-overlay.open a:nth-child(2) { transition-delay: 0.09s; }
+.mobile-overlay.open a:nth-child(3) { transition-delay: 0.13s; }
+.mobile-overlay.open a:nth-child(4) { transition-delay: 0.17s; }
+.mobile-overlay.open a:nth-child(5) { transition-delay: 0.21s; }
+.mobile-overlay.open a:nth-child(6) { transition-delay: 0.25s; }
+.mobile-overlay.open a:nth-child(7) { transition-delay: 0.29s; }
+.mobile-overlay.open a:nth-child(8) { transition-delay: 0.33s; }
+.mobile-overlay.open a:nth-child(9) { transition-delay: 0.37s; }
 .mobile-overlay a.active { color: var(--accent-primary); }
 
 @media (max-width: 1024px) {
