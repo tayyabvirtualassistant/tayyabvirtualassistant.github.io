@@ -1,9 +1,13 @@
+html { overflow-x: clip; }
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--text-base);
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 ::selection { background: var(--accent-primary); color: #fff; }
