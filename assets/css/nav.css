@@ -124,3 +124,9 @@
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
+
+/* Short phones: let the mobile menu scroll instead of getting cut off */
+@media (max-width: 768px) and (max-height: 720px) {
+  .mobile-overlay { justify-content: flex-start; gap: 16px; padding-top: 96px; padding-bottom: 32px; overflow-y: auto; }
+  .mobile-overlay a { font-size: 1.25rem; }
+}
