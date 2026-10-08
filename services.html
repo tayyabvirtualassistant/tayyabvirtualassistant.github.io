@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Six complete virtual assistant service areas from Tayyab: social media, email, data entry, content, writing, and executive assistance.">
+<meta name="author" content="Tayyab">
+<meta property="og:title" content="VA Services | Tayyab">
+<meta property="og:description" content="Social Media, Email, Data Entry, Content, Writing, Executive Assistance, Recruitment and HR Support.">
+<meta property="og:image" content="assets/images/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="services.html">
+<link rel="icon" href="assets/images/favicon.ico">
+<title>VA Services | Social Media, Email, Content, Writing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/nav.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/transitions.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+.intro-block { max-width: 640px; margin: 0 auto; text-align: center; padding: 64px 6% 0; color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.7; }
+
+.service-block { padding: 96px 0; overflow: hidden; }
+.service-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: var(--max-width); margin: 0 auto; padding: 0 6%; }
+.service-block.reverse .service-cols { direction: rtl; }
+.service-block.reverse .service-cols > * { direction: ltr; }
+
+.service-text { position: relative; }
+.service-num { position: absolute; top: -50px; left: -10px; font-family: var(--font-display); font-weight: 800; font-size: 7rem; color: var(--border-default); z-index: 0; line-height: 1; }
+.service-cat-tag { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent-cyan); border: 1px solid rgba(6,182,212,0.3); padding: 5px 12px; border-radius: 100px; display: inline-block; position: relative; z-index: 1; }
+.service-name { font-family: var(--font-display); font-weight: 800; font-size: var(--text-4xl); margin: 16px 0 20px; position: relative; z-index: 1; }
+.service-desc { color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; position: relative; z-index: 1; }
+.service-desc p { margin-bottom: 12px; }
+.included-heading { font-family: var(--font-display); font-weight: 600; font-size: var(--text-base); margin-bottom: 12px; }
+.included-list { margin-bottom: 20px; }
+.included-list li { position: relative; padding-left: 20px; color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: 10px; line-height: 1.5; }
+.included-list li::before { content: ''; position: absolute; left: 0; top: 6px; width: 6px; height: 6px; background: var(--accent-primary); }
+.best-for { font-size: var(--text-sm); color: var(--text-dim); margin-bottom: 24px; }
+.best-for strong { color: var(--text-secondary); }
+
+.visual-card { border-radius: 20px; aspect-ratio: 4/3; background: var(--bg-card); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; padding: 32px; }
+.visual-mock { width: 100%; height: 100%; }
+.mock-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; width: 100%; }
+.mock-cell { aspect-ratio: 1; border-radius: 6px; background: var(--bg-card-hover); border: 1px solid var(--border-default); }
+.mock-cell.filled { background: linear-gradient(135deg, var(--accent-primary), var(--accent-violet)); }
+.mock-inbox { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.mock-inbox-row { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--bg-card-hover); }
+.mock-inbox-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); flex-shrink: 0; }
+.mock-inbox-line { height: 8px; border-radius: 4px; background: var(--border-strong); flex: 1; }
+.mock-sheet { width: 100%; }
+.mock-sheet table { width: 100%; border-collapse: collapse; }
+.mock-sheet td { border: 1px solid var(--border-default); height: 28px; }
+.mock-sheet td.head { background: var(--accent-primary); opacity: 0.3; }
+
+.pricing-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.pricing-card { padding: 36px 28px; position: relative; }
+.pricing-card.popular { border-color: var(--accent-border); }
+.popular-badge { position: absolute; top: -12px; left: 28px; background: var(--accent-primary); color: #fff; font-family: var(--font-mono); font-size: 11px; padding: 4px 12px; border-radius: 100px; }
+.plan-name { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em; }
+.plan-price { font-family: var(--font-display); font-weight: 800; font-size: var(--text-2xl); margin: 12px 0 4px; }
+.plan-for { color: var(--text-dim); font-size: var(--text-sm); margin-bottom: 20px; }
+.plan-includes li { position: relative; padding-left: 20px; font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: 10px; }
+.plan-includes li::before { content: ''; position: absolute; left: 0; top: 6px; width: 6px; height: 6px; background: var(--accent-primary); }
+</style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-mark">Tayyab<span>.VA</span><div class="loader-ring"></div></div></div>
+<div class="page-transition-overlay"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="why-me.html">Why Me</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-overlay">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="why-me.html">Why Me</a>
+  <a href="skills.html">Skills</a>
+  <a href="tools.html">Tools</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main class="page-content">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
+    <h1>My Services</h1>
+    <p>Seven areas. Complete support.</p>
+  </div>
+</section>
+
+<p class="intro-block reveal">Delegation is the quiet advantage behind most successful businesses. The following six areas cover the recurring work that keeps founders busy but doesn't require their personal expertise — handled reliably, so you can spend your time where it counts.</p>
+
+<section class="service-block bg-primary">
+  <div class="service-cols">
+    <div class="service-text reveal">
+      <span class="service-num">01</span>
+      <span class="service-cat-tag">Social Media</span>
+      <h2 class="service-name">Social Media Management</h2>
+      <div class="service-desc">
+        <p>Consistent, on-brand presence across every platform that matters to your business — planned a month ahead, never left to chance.</p>
+        <p>From content calendars to community replies, the goal is simple: your accounts stay active and on-brand without eating your week.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Monthly content calendar creation</li>
+        <li>Post design using Canva</li>
+        <li>Professional caption and hashtag writing</li>
+        <li>Scheduling via Buffer or Hootsuite</li>
+        <li>Comment and DM monitoring and responses</li>
+        <li>Platform growth strategy</li>
+        <li>Monthly performance report with analytics</li>
+        <li>Platforms: Instagram, Facebook, LinkedIn, TikTok, Pinterest</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Coaches, creators, and small businesses that need a consistent presence without managing it themselves.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-grid">
+        <div class="mock-cell filled"></div><div class="mock-cell"></div><div class="mock-cell filled"></div><div class="mock-cell"></div>
+        <div class="mock-cell"></div><div class="mock-cell filled"></div><div class="mock-cell"></div><div class="mock-cell filled"></div>
+        <div class="mock-cell filled"></div><div class="mock-cell"></div><div class="mock-cell"></div><div class="mock-cell filled"></div>
+        <div class="mock-cell"></div><div class="mock-cell filled"></div><div class="mock-cell filled"></div><div class="mock-cell"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-secondary reverse">
+  <div class="service-cols">
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-inbox">
+        <div class="mock-inbox-row"><div class="mock-inbox-dot"></div><div class="mock-inbox-line" style="width:70%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot" style="background:var(--accent-green)"></div><div class="mock-inbox-line" style="width:50%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot"></div><div class="mock-inbox-line" style="width:80%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot" style="background:var(--accent-gold)"></div><div class="mock-inbox-line" style="width:40%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot"></div><div class="mock-inbox-line" style="width:65%"></div></div>
+      </div>
+    </div>
+    <div class="service-text reveal">
+      <span class="service-num">02</span>
+      <span class="service-cat-tag">Email</span>
+      <h2 class="service-name">Email Management</h2>
+      <div class="service-desc">
+        <p>A calm inbox is a productive one. I handle the daily triage and replies so important messages never sit unanswered.</p>
+        <p>Templates and follow-up systems mean your inbox stays organized long after the initial cleanup.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Daily inbox monitoring and triage</li>
+        <li>Email categorization and folder organization</li>
+        <li>Professional replies on your behalf</li>
+        <li>Custom email template creation</li>
+        <li>Follow-up sequence management</li>
+        <li>Unsubscribe and spam cleanup</li>
+        <li>CRM contact updates from emails</li>
+        <li>Weekly email summary report</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Founders and consultants drowning in email who need a system, not just a cleanup.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-primary">
+  <div class="service-cols">
+    <div class="service-text reveal">
+      <span class="service-num">03</span>
+      <span class="service-cat-tag">Research</span>
+      <h2 class="service-name">Data Entry and Research</h2>
+      <div class="service-desc">
+        <p>Accurate, well-formatted data — whether it's lead lists, competitor research, or a spreadsheet that finally makes sense.</p>
+        <p>Every deliverable is checked for accuracy before it reaches you, formatted the way you'll actually use it.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Accurate data entry into spreadsheets or CRMs</li>
+        <li>Web research and information gathering</li>
+        <li>Lead list building with contact details</li>
+        <li>Data cleaning and duplicate removal</li>
+        <li>Competitor research and analysis</li>
+        <li>Market research summary reports</li>
+        <li>Database maintenance and updates</li>
+        <li>Google Sheets / Excel formatting and formulas</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Sales teams, agencies, and researchers who need clean, reliable data fast.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-sheet">
+        <table>
+          <tr><td class="head"></td><td class="head"></td><td class="head"></td><td class="head"></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-secondary reverse">
+  <div class="service-cols">
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-inbox">
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:90%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:60%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:75%"></div></div>
+      </div>
+    </div>
+    <div class="service-text reveal">
+      <span class="service-num">04</span>
+      <span class="service-cat-tag">Content</span>
+      <h2 class="service-name">Content Creation</h2>
+      <div class="service-desc">
+        <p>Blog posts, captions, and newsletters that sound like you wrote them — because they're built around your voice from the start.</p>
+        <p>A planned content calendar keeps output consistent instead of reactive.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>SEO-aware blog post writing</li>
+        <li>Social media captions for all platforms</li>
+        <li>Email newsletter content writing</li>
+        <li>Website page copy</li>
+        <li>Product and service descriptions</li>
+        <li>Canva graphic design for posts</li>
+        <li>Monthly content calendar planning</li>
+        <li>Proofreading and editing existing content</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Businesses that need regular content but don't have time to write it themselves.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-primary">
+  <div class="service-cols">
+    <div class="service-text reveal">
+      <span class="service-num">05</span>
+      <span class="service-cat-tag">Writing</span>
+      <h2 class="service-name">Professional Writing</h2>
+      <div class="service-desc">
+        <p>Proposals, cold emails, and executive documents that communicate clearly and get the response you're after.</p>
+        <p>Every piece is written with the reader's decision in mind, not just filled with words.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Business proposal writing</li>
+        <li>Cold email campaign writing and sequencing</li>
+        <li>Sales and marketing copy</li>
+        <li>Executive summaries and reports</li>
+        <li>Business correspondence drafting</li>
+        <li>LinkedIn profile optimization copy</li>
+        <li>Pitch deck text content</li>
+        <li>Ghostwriting for thought leadership posts</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Agencies and founders who need persuasive, professional writing without hiring a copywriter.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-inbox">
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:80%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:55%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:70%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-line" style="width:40%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-secondary reverse">
+  <div class="service-cols">
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-grid">
+        <div class="mock-cell"></div><div class="mock-cell filled"></div><div class="mock-cell"></div><div class="mock-cell"></div>
+        <div class="mock-cell filled"></div><div class="mock-cell"></div><div class="mock-cell filled"></div><div class="mock-cell"></div>
+      </div>
+    </div>
+    <div class="service-text reveal">
+      <span class="service-num">06</span>
+      <span class="service-cat-tag">Executive</span>
+      <h2 class="service-name">Executive Assistance</h2>
+      <div class="service-desc">
+        <p>Calendar, travel, and task coordination handled quietly in the background, so your day runs the way it's supposed to.</p>
+        <p>This is full administrative support built around how you already work.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Full calendar management (Google / Outlook)</li>
+        <li>Meeting scheduling and coordination</li>
+        <li>Travel research and itinerary planning</li>
+        <li>Document preparation and formatting</li>
+        <li>Expense tracking and logging</li>
+        <li>Invoice creation and follow-up on unpaid invoices</li>
+        <li>CRM setup and maintenance (HubSpot, Zoho)</li>
+        <li>Meeting notes and action item tracking</li>
+        <li>Vendor and supplier research and price comparison</li>
+        <li>Basic bookkeeping support (Excel / QuickBooks data entry)</li>
+        <li>Task and project tracking via Trello / Asana</li>
+        <li>Personal administrative tasks</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Executives and business owners who need a dependable right hand for both admin and back-office work.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+  </div>
+</section>
+
+<section class="service-block bg-primary">
+  <div class="service-cols">
+    <div class="service-text reveal">
+      <span class="service-num">07</span>
+      <span class="service-cat-tag">Recruitment</span>
+      <h2 class="service-name">Recruitment and HR Support</h2>
+      <div class="service-desc">
+        <p>Hiring the right person takes hours you don't have — job posts to write, resumes to screen, interviews to schedule. I handle the process end-to-end so you only step in for the final decision.</p>
+        <p>From the first job listing to the new hire's onboarding paperwork, everything is organized and ready when you need it.</p>
+      </div>
+      <div class="included-heading">What is included:</div>
+      <ul class="included-list">
+        <li>Job posting creation and distribution across platforms</li>
+        <li>Resume and application screening</li>
+        <li>Candidate shortlisting against your criteria</li>
+        <li>Interview scheduling and calendar coordination</li>
+        <li>Candidate communication and follow-up</li>
+        <li>Reference check coordination</li>
+        <li>Onboarding document preparation</li>
+        <li>New hire checklist and welcome pack setup</li>
+      </ul>
+      <p class="best-for"><strong>Best for:</strong> Founders and small teams hiring without a dedicated HR department.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Inquire About This Service</a>
+    </div>
+    <div class="visual-card reveal">
+      <div class="visual-mock mock-inbox">
+        <div class="mock-inbox-row"><div class="mock-inbox-dot" style="background:var(--accent-green)"></div><div class="mock-inbox-line" style="width:75%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot"></div><div class="mock-inbox-line" style="width:55%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot" style="background:var(--accent-gold)"></div><div class="mock-inbox-line" style="width:65%"></div></div>
+        <div class="mock-inbox-row"><div class="mock-inbox-dot"></div><div class="mock-inbox-line" style="width:45%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-primary">
+  <div class="container">
+    <h2 class="section-heading text-center reveal">Simple, Transparent Pricing</h2>
+    <div class="pricing-row" data-stagger-group>
+      <div class="glass-card pricing-card reveal">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">$100/mo</div>
+        <div class="plan-for">or $5/hr · For individuals and solopreneurs</div>
+        <ul class="plan-includes">
+          <li>Up to 20 hours/month</li>
+          <li>1 core service area</li>
+          <li>Email support</li>
+          <li>Weekly check-in</li>
+        </ul>
+      </div>
+      <div class="glass-card pricing-card popular reveal">
+        <span class="popular-badge">Most Popular</span>
+        <div class="plan-name">Professional</div>
+        <div class="plan-price">$200/mo</div>
+        <div class="plan-for">or $4/hr · For small business owners</div>
+        <ul class="plan-includes">
+          <li>Up to 50 hours/month</li>
+          <li>Up to 3 service areas</li>
+          <li>Priority response</li>
+          <li>Daily check-ins</li>
+          <li>Monthly report</li>
+        </ul>
+      </div>
+      <div class="glass-card pricing-card reveal">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$300/mo</div>
+        <div class="plan-for">For executives and agencies</div>
+        <ul class="plan-includes">
+          <li>Up to 80 hours/month</li>
+          <li>All 7 services</li>
+          <li>Dedicated availability</li>
+          <li>NDA included</li>
+          <li>Same-day response</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center" style="color: var(--text-secondary); margin-top: 32px;">Need help for just a few days? Pay as you go at <strong style="color: var(--text-primary);">$25 per day</strong>.</p>
+    <div class="text-center mt-48">
+      <p style="color: var(--text-secondary); margin-bottom: 20px;">Not sure which plan fits? Let's talk.</p>
+      <a href="contact.html" class="btn btn-primary magnetic">Get a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+      <p class="footer-tagline">Professional Virtual Assistant</p>
+      <p class="footer-desc">Helping entrepreneurs reclaim their time from Lahore, Pakistan.</p>
+      <div class="badge-available"><span class="dot-pulse"></span> Open to New Clients</div>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="why-me.html">Why Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Social Media Management</li>
+        <li>Email Management</li>
+        <li>Data Entry and Research</li>
+        <li>Content Creation</li>
+        <li>Professional Writing</li>
+        <li>Executive Assistance</li>
+        <li>Recruitment and HR Support</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <ul>
+        <li>Lahore, Pakistan</li>
+        <li>PKT (UTC+5)</li>
+        <li>Mon – Sat</li>
+        <li>Response within 24 hours</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2025 Tayyab.VA — All Rights Reserved</span>
+    <span>Designed with precision in Pakistan</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/transitions.js"></script>
+<script src="assets/js/animations.js"></script>
+<a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><span class="whatsapp-pulse"></span><svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.02 3C9.4 3 4 8.36 4 15c0 2.34.66 4.52 1.8 6.38L4 29l7.82-1.75A11.9 11.9 0 0016.02 27C22.65 27 28 21.64 28 15S22.65 3 16.02 3zm0 21.7c-2 0-3.87-.56-5.46-1.53l-.39-.23-4.64 1.04 1.02-4.5-.25-.42A9.63 9.63 0 016.3 15c0-5.36 4.37-9.7 9.72-9.7 5.36 0 9.72 4.34 9.72 9.7 0 5.36-4.36 9.7-9.72 9.7zm5.32-7.27c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg></a>
+</body>
+</html>

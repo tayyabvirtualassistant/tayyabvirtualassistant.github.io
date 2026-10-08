@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Backgrounds */
+  --bg-base:       #07090F;
+  --bg-primary:    #0B0F1A;
+  --bg-secondary:  #101525;
+  --bg-card:       #141D2E;
+  --bg-card-hover: #1A2540;
+  --bg-nav:        rgba(11,15,26,0.92);
+
+  /* Accent */
+  --accent-primary: #4361EE;
+  --accent-hover:   #3651D4;
+  --accent-glow:    rgba(67,97,238,0.18);
+  --accent-border:  rgba(67,97,238,0.25);
+  --accent-violet:  #7C3AED;
+  --accent-cyan:    #06B6D4;
+  --accent-green:   #10B981;
+  --accent-gold:    #F59E0B;
+
+  /* Text */
+  --text-primary:   #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-dim:       #64748B;
+  --text-inverse:   #07090F;
+
+  /* Borders */
+  --border-subtle:  rgba(255,255,255,0.05);
+  --border-default: rgba(255,255,255,0.08);
+  --border-strong:  rgba(255,255,255,0.14);
+
+  /* Glass */
+  --glass-bg:       rgba(20,29,46,0.7);
+  --glass-border:   rgba(255,255,255,0.08);
+  --glass-blur:     blur(20px);
+
+  /* Fonts */
+  --font-display: 'Sora', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Type scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  2rem;
+  --text-4xl:  2.5rem;
+  --text-5xl:  3.5rem;
+  --text-6xl:  4.5rem;
+
+  /* Spacing */
+  --space-section-desktop: 112px;
+  --space-section-tablet:  72px;
+  --space-section-mobile:  56px;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-tag: 6px;
+  --max-width: 1200px;
+}

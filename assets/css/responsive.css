@@ -1,0 +1,11 @@
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .about-cols, .service-cols, .contact-cols { grid-template-columns: 1fr !important; }
+  .cards-grid-3, .cards-grid-6, .stats-strip { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 640px) {
+  .cards-grid-3, .cards-grid-6, .stats-strip, .form-row-2 { grid-template-columns: 1fr !important; }
+  .page-hero { padding-top: 140px; }
+  .section-heading { font-size: var(--text-3xl) !important; }
+}

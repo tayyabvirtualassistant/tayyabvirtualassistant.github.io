@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tayyab — Professional Virtual Assistant from Lahore, Pakistan. Expert in Social Media Management, Email Management, Data Entry, Content Creation, Writing, Executive Assistance, and Recruitment/HR Support.">
+<meta name="keywords" content="virtual assistant Pakistan, VA services, social media manager, email management, data entry, content creation, recruitment support">
+<meta name="author" content="Tayyab">
+<meta property="og:title" content="Tayyab — Virtual Assistant">
+<meta property="og:description" content="Professional VA services from Lahore, Pakistan. Helping global entrepreneurs reclaim their time.">
+<meta property="og:image" content="assets/images/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="index.html">
+<link rel="icon" href="assets/images/favicon.ico">
+<title>Tayyab — Professional Virtual Assistant | Lahore, Pakistan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/nav.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/transitions.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<style>
+/* Home-page specific */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 6%;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-top: 24px;
+}
+.hero h1 .line1, .hero h1 .line2 { display: block; white-space: nowrap; }
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+}
+.hero h1 .line2 { color: var(--accent-primary); }
+.hero-sub {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin-top: 24px;
+  line-height: 1.6;
+}
+.hero-typing {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--text-base);
+  color: var(--accent-cyan);
+  margin-top: 24px;
+  min-height: 24px;
+}
+.hero-ctas { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; }
+.hero-visual { padding-bottom: 8px; }
+
+.hero-visual { position: relative; }
+.hero-photo-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(67,97,238,0.15);
+  aspect-ratio: 1/1;
+  background: linear-gradient(160deg, #1A2540, #0B0F1A);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-photo-frame .placeholder-label {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  font-size: var(--text-xs);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Intro video: play button on hero photo */
+.hero-photo-frame .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-play { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; background: linear-gradient(to top, rgba(7,9,15,0.55), rgba(7,9,15,0) 45%); }
+.play-circle { width: 46px; height: 46px; border-radius: 50%; background: var(--accent-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(67,97,238,0.5); position: relative; transition: transform 0.25s ease; }
+.play-circle::after { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent-primary); animation: playPulse 2s infinite; }
+.play-circle svg { width: 18px; height: 18px; margin-left: 2px; fill: #fff; }
+.hero-play:hover .play-circle { transform: scale(1.1); }
+.play-label { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(7,9,15,0.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border-strong); padding: 6px 12px; border-radius: 100px; font-family: var(--font-mono); font-size: 11px; color: var(--text-primary); white-space: nowrap; }
+@keyframes playPulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.5); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .play-circle::after { animation: none; } }
+@media (max-width: 480px) { .play-circle { width: 40px; height: 40px; } .play-label { font-size: 10px; padding: 5px 10px; } }
+
+.video-modal { position: fixed; inset: 0; background: rgba(7,9,15,0.94); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 56px 20px 20px; }
+.video-modal.open { display: flex; }
+.video-modal-inner { position: relative; width: min(92vw, 640px); }
+.video-modal video { width: 100%; max-height: 78vh; border-radius: 16px; background: #000; display: block; }
+.video-close { position: absolute; top: -44px; right: 0; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; font-size: 24px; line-height: 1; display: flex; align-items: center; justify-content: center; }
+.video-close:hover { background: var(--accent-primary); }
+.float-card {
+  position: absolute;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.float-card.top { top: -18px; left: -18px; }
+.float-card.bottom { bottom: -18px; right: -18px; }
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 6%;
+}
+.stat-item {
+  text-align: center;
+  border-right: 1px solid var(--border-subtle);
+  padding: 0 16px;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; }
+.stat-label { font-size: var(--text-xs); color: var(--text-dim); margin-top: 8px; }
+
+.cards-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+.service-card { padding: 32px; }
+.service-icon-box {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--accent-glow);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.service-card h3 { font-size: var(--text-xl); font-weight: 700; margin-bottom: 8px; }
+.service-card p { color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.6; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-cyan);
+}
+.service-link svg { transition: transform 0.2s; }
+.service-card:hover .service-link svg { transform: translateX(4px); }
+
+.about-cols { display: grid; grid-template-columns: 48% 52%; gap: 56px; align-items: center; }
+.about-photo {
+  border-radius: 20px;
+  aspect-ratio: 1/1;
+  background: linear-gradient(160deg, #1A2540, #0B0F1A);
+}
+.info-inline { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
+.info-inline div { font-size: var(--text-sm); }
+.info-inline strong { display: block; color: var(--text-primary); font-size: var(--text-sm); }
+.info-inline span { color: var(--text-dim); font-size: var(--text-xs); }
+
+.testimonial-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.testimonial-card { padding: 28px; }
+.t-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.t-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-card-hover); flex-shrink: 0; object-fit: cover; }
+.t-name { font-weight: 700; font-size: var(--text-sm); }
+.t-country { color: var(--text-dim); font-size: var(--text-xs); }
+.t-stars { color: var(--accent-gold); font-size: var(--text-sm); margin-bottom: 10px; }
+.t-quote { font-style: italic; color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.6; }
+.t-tag { margin-top: 14px; }
+
+.cta-dark {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-dark::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+  pointer-events: none;
+}
+.cta-dark h2 { font-size: var(--text-4xl); font-weight: 800; position: relative; }
+.cta-dark p { color: var(--text-secondary); margin-top: 16px; position: relative; }
+.cta-dark .btn { margin-top: 32px; position: relative; }
+.cta-note { margin-top: 16px; color: var(--text-dim); font-size: var(--text-xs); position: relative; }
+</style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-mark">Tayyab<span>.VA</span><div class="loader-ring"></div></div></div>
+<div class="page-transition-overlay"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="why-me.html">Why Me</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-overlay">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="why-me.html">Why Me</a>
+  <a href="skills.html">Skills</a>
+  <a href="tools.html">Tools</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main class="page-content">
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="badge-available"><span class="dot-pulse"></span> Available for New Clients · Remote Worldwide</div>
+      <h1 class="split-text"><span class="line1">Hi, I'm Tayyab.</span><span class="line2">Virtual Assistant.</span></h1>
+      <p class="hero-sub">I help ambitious entrepreneurs, coaches, and business owners reclaim their time by handling the tasks that drain their day.</p>
+      <p class="hero-typing">Currently handling: <span data-typing></span><span class="typing-cursor">&nbsp;</span></p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary magnetic">Work With Me</a>
+        <a href="portfolio.html" class="btn btn-outline magnetic">View My Work</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img class="hero-img" src="assets/images/tayyab-profile.png" alt="Tayyab, Virtual Assistant" fetchpriority="high">
+        <button type="button" class="hero-play" aria-label="Play intro video" aria-haspopup="dialog">
+          <span class="play-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+      </div>
+      <div class="float-card top glass-card float-slow">5-Star Rated VA</div>
+      <div class="float-card bottom glass-card float-slow" style="animation-delay:1.5s">20+ Hours Saved<br>Per Client Weekly</div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-secondary" style="border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+  <div class="stats-strip">
+    <div class="stat-item reveal"><div class="stat-num">20+</div><div class="stat-label">Hours Saved Per Client Weekly</div></div>
+    <div class="stat-item reveal"><div class="stat-num">24h</div><div class="stat-label">Response Time Guarantee</div></div>
+    <div class="stat-item reveal"><div class="stat-num">6</div><div class="stat-label">Core Service Areas</div></div>
+    <div class="stat-item reveal"><div class="stat-num">100%</div><div class="stat-label">Remote Worldwide</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading reveal">What I Do For You</h2>
+    <p class="section-sub reveal">Six service areas designed to take the repetitive, time-consuming work off your plate — so you can focus on the parts of your business only you can do.</p>
+
+    <div class="cards-grid-6" data-stagger-group>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>Content calendars, scheduling, and community management across every platform you're on.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <h3>Email Management</h3>
+        <p>Inbox triage, organized replies, and follow-up sequences so nothing falls through.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><path d="M4 19h16M4 15h10M4 11h16M4 7h10"/></svg></div>
+        <h3>Data Entry and Research</h3>
+        <p>Clean spreadsheets, lead lists, and research reports delivered accurately and on time.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Content Creation</h3>
+        <p>Blog posts, captions, and newsletters written in your voice, on a consistent schedule.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>Professional Writing</h3>
+        <p>Proposals, cold emails, and executive summaries that read clearly and convert.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Executive Assistance</h3>
+        <p>Calendar, travel, invoicing, and task coordination that keeps your day running without you.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="glass-card service-card reveal">
+        <div class="service-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4361EE" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Recruitment and HR Support</h3>
+        <p>Job posting, candidate screening, interview scheduling, and onboarding — handled from start to finish.</p>
+        <a href="services.html" class="service-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-secondary">
+  <div class="container about-cols">
+    <div class="about-photo reveal"><img src="assets/images/tayyab-profile.png" alt="Tayyab, Virtual Assistant" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" loading="lazy"></div>
+    <div class="reveal">
+      <h2 style="font-size: var(--text-3xl); font-weight: 700;">Who Is Tayyab?</h2>
+      <p style="color: var(--text-secondary); margin-top: 20px; line-height: 1.7;">I'm a virtual assistant based in Lahore, Pakistan, working with entrepreneurs and business owners across the US, UK, Australia, and beyond. What started as a way to apply careful attention to detail toward meaningful work has grown into a full practice supporting founders who'd rather spend their time on strategy than spreadsheets.</p>
+      <p style="color: var(--text-secondary); margin-top: 16px; line-height: 1.7;">Every client relationship is treated the same way: clear communication, reliable delivery, and genuine care about the outcomes that matter to your business.</p>
+      <div class="info-inline">
+        <div><strong>Lahore, Pakistan</strong><span>Location</span></div>
+        <div><strong>English, Urdu</strong><span>Languages</span></div>
+        <div><strong>PKT (UTC+5)</strong><span>Timezone</span></div>
+      </div>
+      <a href="about.html" class="btn btn-primary magnetic mt-48" style="margin-top:32px;">Read My Full Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading text-center reveal">What Clients Say</h2>
+    <div class="testimonial-row" data-stagger-group>
+      <div class="glass-card testimonial-card reveal">
+        <div class="t-header"><img class="t-avatar" src="assets/images/clients/sarah-mitchell.jpg" alt="Sarah Mitchell" loading="lazy"><div><div class="t-name">Sarah Mitchell</div><div class="t-country">United States</div></div></div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Working with Tayyab transformed my Instagram presence completely. Within six weeks, my profile brought in three new coaching clients."</p>
+        <span class="chip t-tag">Social Media Management</span>
+      </div>
+      <div class="glass-card testimonial-card reveal">
+        <div class="t-header"><img class="t-avatar" src="assets/images/clients/james-thornton.jpg" alt="James Thornton" loading="lazy"><div><div class="t-name">James Thornton</div><div class="t-country">United Kingdom</div></div></div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"I had over 900 unread emails. Tayyab organized everything within 48 hours and set up a system I can actually maintain."</p>
+        <span class="chip t-tag">Email Management</span>
+      </div>
+      <div class="glass-card testimonial-card reveal">
+        <div class="t-header"><img class="t-avatar" src="assets/images/clients/michael-chen.jpg" alt="Michael Chen" loading="lazy"><div><div class="t-name">Michael Chen</div><div class="t-country">United States</div></div></div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Managing my inbox and calendar frees me to do work that actually grows the company. Communication is always prompt and clear."</p>
+        <span class="chip t-tag">Executive Assistance</span>
+      </div>
+    </div>
+    <p class="text-center mt-48"><a href="portfolio.html" style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: var(--text-sm);">View All 12 Reviews →</a></p>
+  </div>
+</section>
+
+<section class="section bg-secondary cta-dark">
+  <div class="container">
+    <h2 class="reveal">Ready to Delegate and Focus on Growth?</h2>
+    <p class="reveal">First call is free. No commitment required.</p>
+    <a href="contact.html" class="btn btn-primary magnetic">Schedule a Free Discovery Call</a>
+    <p class="cta-note">Usually responds within 4 hours</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+      <p class="footer-tagline">Professional Virtual Assistant</p>
+      <p class="footer-desc">Helping entrepreneurs reclaim their time from Lahore, Pakistan.</p>
+      <div class="badge-available"><span class="dot-pulse"></span> Open to New Clients</div>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="why-me.html">Why Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Social Media Management</li>
+        <li>Email Management</li>
+        <li>Data Entry and Research</li>
+        <li>Content Creation</li>
+        <li>Professional Writing</li>
+        <li>Executive Assistance</li>
+        <li>Recruitment and HR Support</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <ul>
+        <li>Lahore, Pakistan</li>
+        <li>PKT (UTC+5)</li>
+        <li>Mon – Sat</li>
+        <li>Response within 24 hours</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2025 Tayyab.VA — All Rights Reserved</span>
+    <span>Designed with precision in Pakistan</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/transitions.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/typing.js"></script>
+<a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><span class="whatsapp-pulse"></span><svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.02 3C9.4 3 4 8.36 4 15c0 2.34.66 4.52 1.8 6.38L4 29l7.82-1.75A11.9 11.9 0 0016.02 27C22.65 27 28 21.64 28 15S22.65 3 16.02 3zm0 21.7c-2 0-3.87-.56-5.46-1.53l-.39-.23-4.64 1.04 1.02-4.5-.25-.42A9.63 9.63 0 016.3 15c0-5.36 4.37-9.7 9.72-9.7 5.36 0 9.72 4.34 9.72 9.7 0 5.36-4.36 9.7-9.72 9.7zm5.32-7.27c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg></a>
+<div class="video-modal" id="intro-modal" role="dialog" aria-modal="true" aria-label="Intro video from Tayyab">
+  <div class="video-modal-inner">
+    <button type="button" class="video-close" aria-label="Close video">&times;</button>
+    <video id="intro-video" src="assets/videos/tayyab-intro.mp4" poster="assets/images/tayyab-profile.png" controls playsinline preload="none"></video>
+  </div>
+</div>
+<script>
+(function () {
+  var openBtn = document.querySelector('.hero-play');
+  var modal = document.getElementById('intro-modal');
+  var video = document.getElementById('intro-video');
+  var closeBtn = modal.querySelector('.video-close');
+  if (!openBtn || !modal || !video) return;
+
+  function openModal() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (window.__lenis) window.__lenis.stop();
+    video.currentTime = 0;
+    var p = video.play();
+    if (p && p.catch) p.catch(function () {});
+    closeBtn.focus();
+  }
+  function closeModal() {
+    video.pause();
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    if (window.__lenis) window.__lenis.start();
+    openBtn.focus();
+  }
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+})();
+</script>
+</body>
+</html>

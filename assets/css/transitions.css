@@ -1,0 +1,65 @@
+/* Simple smooth fade overlay — no slide, no jerky scaleY */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-base);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.page-transition-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.is-transitioning { cursor: wait; }
+
+.page-content {
+  opacity: 0;
+}
+.page-content.entered {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Full-page loader shown until everything is ready */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-base);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-mark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.loader-mark span { color: var(--accent-primary); }
+.loader-ring {
+  width: 18px; height: 18px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: loaderspin 0.7s linear infinite;
+}
+@keyframes loaderspin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-content { opacity: 1 !important; }
+  .page-transition-overlay { transition: none; }
+  .loader-ring { animation: none; }
+}

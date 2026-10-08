@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How working with Tayyab works — from first message to daily delegated tasks, and answers to common questions.">
+<meta name="author" content="Tayyab">
+<meta property="og:title" content="How It Works | Tayyab Virtual Assistant">
+<meta property="og:description" content="From first message to results in days, not weeks.">
+<meta property="og:image" content="assets/images/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="how-it-works.html">
+<link rel="icon" href="assets/images/favicon.ico">
+<title>How It Works | Tayyab Virtual Assistant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/nav.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/transitions.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+.timeline-wrap { position: relative; max-width: 900px; margin: 64px auto 0; }
+.timeline-center-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--accent-primary), var(--accent-violet)); transform: translateX(-50%); }
+.timeline-step { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: start; margin-bottom: 64px; }
+.timeline-step .step-content { padding: 0 32px; }
+.timeline-step:nth-child(even) .step-content.right { grid-column: 1; text-align: right; }
+.timeline-step:nth-child(even) .step-content.left { grid-column: 3; text-align: left; }
+.timeline-node {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--accent-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; color: #fff;
+  justify-self: center;
+  transition: transform 0.3s;
+  grid-column: 2;
+}
+.timeline-node.active { animation: pop 0.5s ease; }
+@keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.step-day { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent-cyan); }
+.step-heading { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); margin: 8px 0 10px; }
+.step-detail { color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .timeline-center-line { left: 24px; }
+  .timeline-step { grid-template-columns: 60px 1fr; }
+  .timeline-node { grid-column: 1; }
+  .timeline-step .step-content, .timeline-step:nth-child(even) .step-content.right, .timeline-step:nth-child(even) .step-content.left {
+    grid-column: 2 !important; text-align: left !important;
+  }
+}
+
+.faq-list { max-width: 800px; margin: 48px auto 0; }
+.faq-item { border-bottom: 1px solid var(--border-subtle); }
+.faq-question {
+  width: 100%; text-align: left; padding: 24px 0;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-display); font-weight: 600; font-size: var(--text-base);
+  color: var(--text-primary);
+}
+.faq-question .icon { transition: transform 0.3s; color: var(--accent-primary); flex-shrink: 0; margin-left: 16px; }
+.faq-item.open .faq-question .icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-answer p { color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.7; padding-bottom: 24px; }
+</style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-mark">Tayyab<span>.VA</span><div class="loader-ring"></div></div></div>
+<div class="page-transition-overlay"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="why-me.html">Why Me</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-overlay">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="why-me.html">Why Me</a>
+  <a href="skills.html">Skills</a>
+  <a href="tools.html">Tools</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main class="page-content">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / How It Works</div>
+    <h1>How It Works</h1>
+    <p>From first message to results in days, not weeks.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="timeline-wrap">
+      <div class="timeline-center-line"></div>
+
+      <div class="timeline-step">
+        <div class="step-content right"></div>
+        <div class="timeline-node">1</div>
+        <div class="step-content left reveal">
+          <div class="step-day">Day 1</div>
+          <div class="step-heading">You Reach Out</div>
+          <p class="step-detail">You send a message via the contact form, WhatsApp, or email. Briefly describe what you need help with — no formal brief required at this stage.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-content right reveal">
+          <div class="step-day">Day 1–2</div>
+          <div class="step-heading">We Have a Free 15-Minute Call</div>
+          <p class="step-detail">We schedule a short video call using Zoom or Google Meet. I listen to your business needs, current bottlenecks, and the tasks you want handled. No sales pitch — just an honest conversation.</p>
+        </div>
+        <div class="timeline-node">2</div>
+        <div class="step-content left"></div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-content right"></div>
+        <div class="timeline-node">3</div>
+        <div class="step-content left reveal">
+          <div class="step-day">Day 2–3</div>
+          <div class="step-heading">You Receive a Clear Proposal</div>
+          <p class="step-detail">Within 24 hours, I send a detailed written proposal covering services, scope, deliverables, pricing, and expected outcomes. Everything written clearly — no vague language, no hidden fees.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-content right reveal">
+          <div class="step-day">Day 3–5</div>
+          <div class="step-heading">Quick and Smooth Onboarding</div>
+          <p class="step-detail">Once agreed, we set up shared tools, access credentials, communication channels, and document your workflow preferences. Most clients are fully operational in under 48 hours.</p>
+        </div>
+        <div class="timeline-node">4</div>
+        <div class="step-content left"></div>
+      </div>
+
+      <div class="timeline-step" style="margin-bottom:0;">
+        <div class="step-content right"></div>
+        <div class="timeline-node">5</div>
+        <div class="step-content left reveal">
+          <div class="step-day">Day 5 onward</div>
+          <div class="step-heading">Tasks Handled. You Focus on Growth.</div>
+          <p class="step-detail">I begin handling your tasks with daily progress updates. You receive a weekly summary report every Friday covering work completed, hours used, and upcoming tasks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-secondary">
+  <div class="container">
+    <h2 class="section-heading text-center reveal">Common Questions</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">What are your working hours?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Monday to Saturday, 9 AM to 9 PM Pakistan Time (PKT, UTC+5). I accommodate client time zones where possible and communicate any scheduling conflicts well in advance.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do we communicate daily?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Primarily via Slack, email, or WhatsApp — whichever you prefer. I send daily task updates and a weekly summary every Friday.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Which payment methods do you accept?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>I accept payments through Payoneer, Wise, and direct bank transfer. Upwork and Fiverr both handle payment securely if hiring through those platforms.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I hire you for just a few hours?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Yes. I offer flexible hourly arrangements with no minimum contract requirement for new clients. Short-term trial projects are welcome, and a pay-as-you-go option is available at $25 per day.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you sign a Non-Disclosure Agreement?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Absolutely. An NDA can be provided and signed before any work begins if you need it. Confidentiality is a core commitment, not an add-on.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What tools do I need to give you access to?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Only the tools relevant to your service. I request read/write access to what is strictly necessary and document all credentials securely.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How quickly can you start?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>Once the proposal is agreed and onboarding is complete, I can begin within 24-48 hours. A same-day rush start is possible in some cases.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if I am not satisfied with the work?<span class="icon">+</span></button>
+        <div class="faq-answer"><p>I offer unlimited revisions until you are satisfied. If at any point the arrangement is not working, you may end it with 3 days notice. No lock-in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Tayyab<span>.VA</span></a>
+      <p class="footer-tagline">Professional Virtual Assistant</p>
+      <p class="footer-desc">Helping entrepreneurs reclaim their time from Lahore, Pakistan.</p>
+      <div class="badge-available"><span class="dot-pulse"></span> Open to New Clients</div>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="why-me.html">Why Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Social Media Management</li>
+        <li>Email Management</li>
+        <li>Data Entry and Research</li>
+        <li>Content Creation</li>
+        <li>Professional Writing</li>
+        <li>Executive Assistance</li>
+        <li>Recruitment and HR Support</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <ul>
+        <li>Lahore, Pakistan</li>
+        <li>PKT (UTC+5)</li>
+        <li>Mon – Sat</li>
+        <li>Response within 24 hours</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2025 Tayyab.VA — All Rights Reserved</span>
+    <span>Designed with precision in Pakistan</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/transitions.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/accordion.js"></script>
+<a href="https://wa.me/923124581964" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><span class="whatsapp-pulse"></span><svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.02 3C9.4 3 4 8.36 4 15c0 2.34.66 4.52 1.8 6.38L4 29l7.82-1.75A11.9 11.9 0 0016.02 27C22.65 27 28 21.64 28 15S22.65 3 16.02 3zm0 21.7c-2 0-3.87-.56-5.46-1.53l-.39-.23-4.64 1.04 1.02-4.5-.25-.42A9.63 9.63 0 016.3 15c0-5.36 4.37-9.7 9.72-9.7 5.36 0 9.72 4.34 9.72 9.7 0 5.36-4.36 9.7-9.72 9.7zm5.32-7.27c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg></a>
+</body>
+</html>

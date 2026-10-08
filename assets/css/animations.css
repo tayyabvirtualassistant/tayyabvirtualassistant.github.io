@@ -1,0 +1,47 @@
+.split-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.float-slow {
+  animation: floatY 3s ease-in-out infinite;
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  background: var(--accent-cyan);
+  margin-left: 2px;
+  animation: blink 0.9s step-start infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.skill-bar-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border-default);
+  overflow: hidden;
+  position: relative;
+}
+.skill-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-violet));
+  transition: width 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.timeline-line-svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 1.5s ease;
+}
+.timeline-line-svg.drawn path { stroke-dashoffset: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow { animation: none; }
+}
