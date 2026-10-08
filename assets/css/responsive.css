@@ -3,6 +3,17 @@
    Breakpoints: 1024 tablet · 900 · 768 mobile nav · 640 · 480
    ========================================================= */
 
+/* ---------- Overflow guards (tablet/mobile only) ---------- */
+@media (max-width: 1024px) {
+  .hero-grid > *, .about-cols > *, .service-cols > *, .contact-cols > *,
+  .cards-grid-3 > *, .cards-grid-6 > *, .stats-strip > *, .pricing-row > *,
+  .testimonial-row > *, .reviews-grid > *, .guarantee-row > *, .big-stats > *,
+  .skills-grid-2 > *, .values-row > *, .adapt-cols > *, .form-row-2 > *,
+  .footer-grid > *, .timeline-step > * { min-width: 0; }
+  h1, h2, h3, h4, p, li, a, span, label { overflow-wrap: break-word; }
+  img, video, svg, iframe, table { max-width: 100%; }
+}
+
 /* ---------- Tablet (≤1024px) ---------- */
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
