@@ -26,6 +26,11 @@
     overlay.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
+    // Inline fallbacks so the menu shows even if an older nav.css is cached
+    overlay.style.transform = open ? 'none' : '';
+    overlay.style.visibility = open ? 'visible' : '';
+    overlay.style.opacity = open ? '1' : '';
+    overlayLinks.forEach(l => { l.style.opacity = open ? '1' : ''; l.style.transform = open ? 'none' : ''; });
     if (window.__lenis) { open ? window.__lenis.stop() : window.__lenis.start(); }
   }
 
